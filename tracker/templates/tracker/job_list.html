@@ -1,0 +1,24 @@
+<h2>Submitted Jobs</h2>
+<table border="1" cellpadding="8">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Status</th>
+    <th>Actions</th>
+  </tr>
+  {% for job in jobs %}
+  <tr>
+    <td>{{ job.id }}</td>
+    <td>{{ job.name }}</td>
+    <td>{{ job.email }}</td>
+    <td>{{ job.status }}</td>
+    <td>
+      <a href="{% url 'update_status' job.id 'running' %}">Start</a> |
+      <a href="{% url 'update_status' job.id 'done' %}">Complete</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+<br>
+<a href="{% url 'submit' %}">Submit New Job</a>

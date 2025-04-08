@@ -1,0 +1,8 @@
+<h2>Submit a New Job</h2>
+<form method="post">
+  {% csrf_token %}
+  Name: <input type="text" name="name"><br><br>
+  Email: <input type="email" name="email"><br><br>
+  <button type="submit">Submit Job</button>
+</form>
+<a href="{% url 'home' %}">Back to Job List</a>
