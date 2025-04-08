@@ -21,7 +21,8 @@ cd biojob-tracker
 docker compose up --build
 ```
 ---
-🔗 Visit the app: [http://localhost:8000](http://localhost:8000)
+
+## 🔗 Visit the app: [http://localhost:8000](http://localhost:8000)
 
 ✅ Simple  
 ✅ Clickable  
