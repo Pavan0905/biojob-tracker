@@ -2,3 +2,6 @@
 *.zip
 *.html
 data/
+data/
+*.zip
+*.html
