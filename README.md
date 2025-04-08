@@ -19,3 +19,5 @@ A Dockerized Django web app to submit, track, and simulate bioinformatics jobs â
 git clone https://github.com/Pavan0905/biojob-tracker.git
 cd biojob-tracker
 docker compose up --build
+
+ðŸ”— Visit the app: [http://localhost:8000](http://localhost:8000)
