@@ -36,3 +36,8 @@ If you later deploy it on a real server (like Heroku, Render, or AWS), you can c
 
 ```markdown
 🔗 Live demo: [https://your-deployment-url.com](https://your-deployment-url.com)
+
+```
+##  Screenshots
+
+<img src="screenshots/dashboard.png" alt="Job Dashboard" width="600"/>
