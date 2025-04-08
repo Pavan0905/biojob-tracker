@@ -1,0 +1,4 @@
+# Ignore FastQC and temp data
+*.zip
+*.html
+data/
