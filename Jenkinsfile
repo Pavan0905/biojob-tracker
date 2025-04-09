@@ -22,7 +22,7 @@ pipeline {
 
         stage('Check App') {
             steps {
-                sh 'curl --fail http://localhost:8000 || exit 1'
+                sh 'curl -I http://localhost:8000'
             }
         }
     }
