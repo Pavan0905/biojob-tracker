@@ -1,26 +1,29 @@
 pipeline {
-  agent any
+    agent any
 
-  stages {
-    stage(' Build Docker Image') {
-      steps {
-        echo 'Building Docker image...'
-        sh 'docker compose build'
-      }
-    }
+    stages {
+        stage('Clone Repo') {
+            steps {
+                checkout scm
+            }
+        }
 
-    stage(' Start App') {
-      steps {
-        echo 'Running Docker container...'
-        sh 'docker compose up -d'
-      }
-    }
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker compose build'
+            }
+        }
 
-    stage(' Check App') {
-      steps {
-        echo 'Checking app availability...'
-        sh 'curl -I http://localhost:8000 || true'
-      }
+        stage('Start App') {
+            steps {
+                sh 'docker compose up -d'
+            }
+        }
+
+        stage('Check App') {
+            steps {
+                sh 'curl --fail http://localhost:8000 || exit 1'
+            }
+        }
     }
-  }
 }
